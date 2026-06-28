@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Megacore Integrated Services Ltd</title>
+
+<meta
+name="description"
+content="Engineering, Renewable Energy, Electrical, ICT, and Contracting Solutions"
+/>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@600;700&display=swap"
+rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+font-family:Inter,sans-serif;
+}
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(
+rgba(15,23,42,.88),
+rgba(15,23,42,.88)
+),
+url("assets/images/hero.jpg");
+
+background-size:cover;
+background-position:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="flex justify-between items-center h-20">
+
+<div class="flex items-center gap-3">
+
+<img
+src="assets/logo/megacore-logo.png"
+class="h-12"
+
+>
+
+<div>
+
+<h1 class="text-white font-bold">
+MEGACORE
+</h1>
+
+<p class="text-xs text-gray-300">
+Integrated Services Ltd
+</p>
+
+</div>
+
+</div>
+
+<div class="hidden md:flex gap-8">
+
+<a href="index.html" class="text-white">
+Home
+</a>
+
+<a href="about.html" class="text-white">
+About
+</a>
+
+<a href="services.html" class="text-white">
+Services
+</a>
+
+<a href="projects.html" class="text-white">
+Projects
+</a>
+
+<a href="quote.html" class="text-white">
+Quote
+</a>
+
+<a href="contact.html" class="text-white">
+Contact
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero flex items-center">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="max-w-3xl">
+
+<p class="text-orange-500 mb-4">
+
+Integrated Engineering • Energy • ICT
+
+</p>
+
+<h1
+class="
+text-5xl
+font-bold
+text-white
+leading-tight
+"
+>
+
+Powering the Future
+with Clean Energy
+
+</h1>
+
+<p
+class="
+text-gray-300
+mt-6
+text-lg
+"
+>
+
+Engineering services,
+renewable energy,
+electrical installation,
+internet infrastructure,
+consultancy and project delivery.
+
+</p>
+
+<div class="mt-10 flex gap-4">
+
+<a
+href="quote.html"
+
+class="
+bg-orange-500
+px-8
+py-4
+rounded-xl
+text-white
+"
+
+>
+
+Request Quote
+
+</a>
+
+<a
+href="services.html"
+
+class="
+border
+border-white
+px-8
+py-4
+rounded-xl
+text-white
+"
+
+>
+
+Explore Services
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
