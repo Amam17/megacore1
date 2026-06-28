@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Request Quote | Megacore
+</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="config/env.js"></script>
+
+<script type="module"
+src="js/supabase.js">
+</script>
+
+</head>
+
+<body
+class="
+bg-slate-50
+min-h-screen
+">
+
+<div
+class="
+max-w-3xl
+mx-auto
+p-8
+">
+
+<h1
+class="
+text-4xl
+font-bold
+mb-8
+">
+
+Request Quote
+
+</h1>
+
+<form
+id="quoteForm"
+
+class="
+space-y-5
+"
+>
+
+<input
+name="full_name"
+placeholder="Full Name"
+required
+class="w-full p-4 border rounded"
+/>
+
+<input
+name="company"
+placeholder="Company"
+/>
+
+<input
+name="phone"
+placeholder="Phone Number"
+required
+class="w-full p-4 border rounded"
+/>
+
+<select
+name="service"
+
+class="
+w-full
+p-4
+border
+rounded
+">
+
+<option>
+Solar Installation
+</option>
+
+<option>
+Electrical Services
+</option>
+
+<option>
+ICT Services
+</option>
+
+<option>
+Contracting
+</option>
+
+</select>
+
+<input
+name="budget"
+
+placeholder="Estimated Budget"
+
+class="
+w-full
+p-4
+border
+rounded
+"
+/>
+
+<textarea
+
+name="description"
+
+placeholder="Describe project"
+
+class="
+w-full
+p-4
+border
+rounded
+h-40
+">
+
+</textarea>
+
+<button
+
+class="
+bg-orange-500
+text-white
+px-8
+py-4
+rounded
+"
+
+>
+
+Submit Request
+
+</button>
+
+</form>
+
+<p
+id="msg"
+class="mt-5">
+</p>
+
+</div>
+
+<script type="module">
+
+const form =
+document
+.getElementById(
+'quoteForm'
+)
+
+form
+.addEventListener(
+'submit',
+
+async(e)=>{
+
+e.preventDefault()
+
+const data =
+Object.fromEntries(
+new FormData(form)
+)
+
+const {
+error
+}
+
+=
+await
+window
+.supabase
+
+.from(
+'quote_requests'
+)
+
+.insert(
+[data]
+)
+
+document
+.getElementById(
+'msg'
+)
+
+.innerText=
+
+error
+
+?
+
+'Submission failed'
+
+:
+
+'Quote submitted successfully'
+
+if(!error)
+form.reset()
+
+}
+
+)
+
+</script>
+
+</body>
+
+</html>
