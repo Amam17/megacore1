@@ -8,8 +8,9 @@ from
 
 const supabase =
 createClient(
-https://gzrybqpaoakjmmaftqri.supabase.co,
-sb_publishable_hOy5oRqTebovu-noQ8LnOA_BlnLaCnf
+SUPABASE_URL,
+SUPABASE_KEY
 )
 
-export default supabase
+window.supabase =
+supabase
