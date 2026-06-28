@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,23 +15,16 @@ content="width=device-width, initial-scale=1.0"
 Megacore Integrated Services Ltd
 </title>
 
+<meta
+name="description"
+content="Engineering • Energy • ICT Solutions"
+/>
+
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@600;700&display=swap"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
 rel="stylesheet"
-/>
-
-<script src="config/env.js"></script>
-
-<script
-type="module"
-src="js/supabase.js">
-</script>
-
-<link
-rel="stylesheet"
-href="css/style.css"
 />
 
 <style>
@@ -43,8 +40,8 @@ min-height:100vh;
 background:
 
 linear-gradient(
-rgba(15,23,42,.88),
-rgba(15,23,42,.88)
+rgba(15,23,42,.90),
+rgba(15,23,42,.90)
 ),
 
 url("assets/images/hero.jpg");
@@ -59,16 +56,19 @@ background-position:center;
 
 </head>
 
-<body class="bg-slate-900">
+<body>
+
+<!-- NAVBAR -->
 
 <nav
 class="
 fixed
 top-0
+left-0
 w-full
-z-50
 bg-slate-900/80
 backdrop-blur
+z-50
 ">
 
 <div
@@ -104,6 +104,7 @@ class="h-12"
 class="
 text-white
 font-bold
+text-xl
 ">
 
 MEGACORE
@@ -132,7 +133,15 @@ gap-8
 text-white
 ">
 
-<a href="index.html">Home</a> <a href="services.html">Services</a> <a href="projects.html">Projects</a> <a href="quote.html">Quote</a> <a href="contact.html">Contact</a>
+<a href="#">Home</a>
+
+<a href="#">Services</a>
+
+<a href="#">Projects</a>
+
+<a href="#">Quote</a>
+
+<a href="#">Contact</a>
 
 </div>
 
@@ -142,30 +151,30 @@ text-white
 
 </nav>
 
+<!-- HERO -->
+
 <section
 class="
 hero
 flex
 items-center
-">
+"
+>
 
 <div
 class="
 max-w-7xl
 mx-auto
 px-8
-">
-
-<div
-class="
-max-w-3xl
-">
+"
+>
 
 <p
 class="
 text-orange-500
 mb-6
-">
+"
+>
 
 Integrated Engineering • Energy • ICT
 
@@ -180,8 +189,7 @@ leading-tight
 "
 >
 
-Powering
-the Future
+Powering the Future
 with Clean Energy
 
 </h1>
@@ -190,15 +198,17 @@ with Clean Energy
 class="
 mt-8
 text-xl
-text-slate-300
+text-gray-300
+max-w-3xl
 "
 >
 
-Engineering,
-Renewable Energy,
-Electrical,
-Internet Infrastructure,
-and Technical Consultancy.
+Engineering services,
+renewable energy,
+electrical installation,
+internet infrastructure,
+consultancy,
+and project delivery.
 
 </p>
 
@@ -207,18 +217,20 @@ class="
 mt-10
 flex
 gap-5
-">
+flex-wrap
+"
+>
 
 <a
 
-href="quote.html"
+href="#"
 
 class="
 bg-orange-500
+text-white
 px-8
 py-4
 rounded-xl
-text-white
 "
 
 >
@@ -229,15 +241,15 @@ Request Quote
 
 <a
 
-href="services.html"
+href="#"
 
 class="
 border
 border-white
+text-white
 px-8
 py-4
 rounded-xl
-text-white
 "
 
 >
@@ -250,14 +262,14 @@ Explore Services
 
 </div>
 
-</div>
-
 </section>
+
+<!-- SERVICES -->
 
 <section
 class="
-bg-white
 py-24
+bg-white
 "
 >
 
@@ -266,7 +278,163 @@ class="
 max-w-7xl
 mx-auto
 px-8
-">
+"
+>
+
+<h2
+class="
+text-4xl
+font-bold
+text-center
+mb-16
+"
+>
+
+Our Services
+
+</h2>
+
+<div
+class="
+grid
+md:grid-cols-3
+gap-8
+"
+>
+
+<div class="shadow rounded-xl p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Electrical
+</h3>
+
+<p>
+Installation • Maintenance • Power Solutions
+</p>
+
+</div>
+
+<div class="shadow rounded-xl p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Renewable Energy
+</h3>
+
+<p>
+Solar • Hybrid Systems
+</p>
+
+</div>
+
+<div class="shadow rounded-xl p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+ICT & Internet
+</h3>
+
+<p>
+Networking • Starlink • Connectivity
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section
+class="
+bg-slate-900
+text-white
+py-20
+"
+>
+
+<div
+class="
+max-w-7xl
+mx-auto
+grid
+grid-cols-2
+md:grid-cols-4
+text-center
+gap-8
+"
+>
+
+<div>
+
+<h3 class="text-5xl font-bold">
+20+
+</h3>
+
+<p>
+Projects
+</p>
+
+</div>
+
+<div>
+
+<h3 class="text-5xl font-bold">
+95%
+</h3>
+
+<p>
+Satisfaction
+</p>
+
+</div>
+
+<div>
+
+<h3 class="text-5xl font-bold">
+24/7
+</h3>
+
+<p>
+Support
+</p>
+
+</div>
+
+<div>
+
+<h3 class="text-5xl font-bold">
+4
+</h3>
+
+<p>
+Service Areas
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY -->
+
+<section
+class="
+py-24
+bg-white
+"
+>
+
+<div
+class="
+max-w-7xl
+mx-auto
+text-center
+px-8
+"
+>
 
 <h2
 class="
@@ -276,23 +444,41 @@ mb-12
 "
 >
 
-Featured Projects
+Why Choose Megacore
 
 </h2>
 
 <div
-
-id="featuredProjects"
-
 class="
 grid
 md:grid-cols-3
 gap-8
 "
-
 >
 
-Loading...
+<div>
+
+<h3 class="font-bold text-xl">
+Integrated Solutions
+</h3>
+
+</div>
+
+<div>
+
+<h3 class="font-bold text-xl">
+Reliable Delivery
+</h3>
+
+</div>
+
+<div>
+
+<h3 class="font-bold text-xl">
+Technical Excellence
+</h3>
+
+</div>
 
 </div>
 
@@ -300,104 +486,45 @@ Loading...
 
 </section>
 
-<script
-type="module"
+<!-- FOOTER -->
+
+<footer
+class="
+bg-slate-950
+text-white
+py-10
+"
 >
-
-window
-.addEventListener(
-
-"load",
-
-async()=>{
-
-const area =
-document
-.getElementById(
-"featuredProjects"
-)
-
-if(
-!window.supabase
-){
-
-area.innerHTML=
-"Supabase not connected"
-
-return
-
-}
-
-const {
-data
-}
-
-=
-
-await
-
-window
-.supabase
-
-.from(
-"projects"
-)
-
-.select("*")
-
-.limit(3)
-
-area.innerHTML=
-
-data
-
-?.map(
-
-p=>
-
-`
 
 <div
 class="
-shadow
-rounded-xl
-p-8
-">
+max-w-7xl
+mx-auto
+px-8
+text-center
+"
+>
 
-<h3
-class="
-text-2xl
-font-bold
-">
-
-${p.title}
-
+<h3 class="text-2xl font-bold">
+MEGACORE
 </h3>
 
-<p>
-${p.category}
+<p class="mt-4">
+
+Powering the Future with Clean Energy
+
 </p>
 
-<p>
-${p.description}
+<p class="mt-2">
+
+09021944502
+
 </p>
 
 </div>
 
-`
-
-)
-
-.join("")
-
-||
-
-"No projects"
-
-}
-
-)
-
-</script>
+</footer>
 
 </body>
+
+</html>
