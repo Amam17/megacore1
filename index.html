@@ -59,48 +59,194 @@ background-position:center;
 
 </head>
 
-<body>
+<body class="bg-slate-900">
 
-<!-- NAVBAR HERE -->
+<nav
+class="
+fixed
+top-0
+w-full
+z-50
+bg-slate-900/80
+backdrop-blur
+">
 
-<!-- HERO -->
+<div
+class="
+max-w-7xl
+mx-auto
+px-8
+">
 
-<section class="hero flex items-center">
+<div
+class="
+h-20
+flex
+justify-between
+items-center
+">
 
-<div class="max-w-7xl mx-auto px-6">
+<div
+class="
+flex
+items-center
+gap-4
+">
 
-<div class="max-w-3xl">
+<img
+src="assets/logo/megacore-logo.png"
+class="h-12"
+/>
 
-<p class="text-orange-500 mb-4">
+<div>
+
+<h1
+class="
+text-white
+font-bold
+">
+
+MEGACORE
+
+</h1>
+
+<p
+class="
+text-gray-400
+text-xs
+">
+
+Integrated Services Ltd
+
+</p>
+
+</div>
+
+</div>
+
+<div
+class="
+hidden
+md:flex
+gap-8
+text-white
+">
+
+<a href="index.html">Home</a> <a href="services.html">Services</a> <a href="projects.html">Projects</a> <a href="quote.html">Quote</a> <a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<section
+class="
+hero
+flex
+items-center
+">
+
+<div
+class="
+max-w-7xl
+mx-auto
+px-8
+">
+
+<div
+class="
+max-w-3xl
+">
+
+<p
+class="
+text-orange-500
+mb-6
+">
+
 Integrated Engineering • Energy • ICT
+
 </p>
 
 <h1
 class="
-text-5xl
+text-6xl
 font-bold
 text-white
+leading-tight
 "
 >
 
-Powering the Future
+Powering
+the Future
 with Clean Energy
 
 </h1>
 
 <p
 class="
-text-gray-300
-mt-6
+mt-8
+text-xl
+text-slate-300
 "
 >
 
-Engineering services,
-renewable energy,
-electrical installation,
-internet infrastructure.
+Engineering,
+Renewable Energy,
+Electrical,
+Internet Infrastructure,
+and Technical Consultancy.
 
 </p>
+
+<div
+class="
+mt-10
+flex
+gap-5
+">
+
+<a
+
+href="quote.html"
+
+class="
+bg-orange-500
+px-8
+py-4
+rounded-xl
+text-white
+"
+
+>
+
+Request Quote
+
+</a>
+
+<a
+
+href="services.html"
+
+class="
+border
+border-white
+px-8
+py-4
+rounded-xl
+text-white
+"
+
+>
+
+Explore Services
+
+</a>
+
+</div>
 
 </div>
 
@@ -108,27 +254,27 @@ internet infrastructure.
 
 </section>
 
-<!-- FEATURED PROJECTS -->
-
 <section
 class="
-py-24
 bg-white
-">
+py-24
+"
+>
 
 <div
 class="
 max-w-7xl
 mx-auto
-px-6
+px-8
 ">
 
 <h2
 class="
 text-4xl
 font-bold
-mb-10
-">
+mb-12
+"
+>
 
 Featured Projects
 
@@ -154,15 +300,33 @@ Loading...
 
 </section>
 
-<script type="module">
+<script
+type="module"
+>
 
-const featured =
+window
+.addEventListener(
+
+"load",
+
+async()=>{
+
+const area =
 document
 .getElementById(
 "featuredProjects"
 )
 
-try{
+if(
+!window.supabase
+){
+
+area.innerHTML=
+"Supabase not connected"
+
+return
+
+}
 
 const {
 data
@@ -181,18 +345,13 @@ window
 
 .select("*")
 
-.eq(
-"featured",
-true
-)
-
 .limit(3)
 
-featured.innerHTML =
+area.innerHTML=
 
 data
 
-.map(
+?.map(
 
 p=>
 
@@ -200,10 +359,9 @@ p=>
 
 <div
 class="
-bg-white
-rounded-xl
 shadow
-p-6
+rounded-xl
+p-8
 ">
 
 <h3
@@ -221,10 +379,6 @@ ${p.category}
 </p>
 
 <p>
-${p.location}
-</p>
-
-<p>
 ${p.description}
 </p>
 
@@ -236,18 +390,14 @@ ${p.description}
 
 .join("")
 
-}
+||
 
-catch{
-
-featured.innerHTML=
-
-"Unable to load projects"
+"No projects"
 
 }
+
+)
 
 </script>
-
-<script src="js/app.js"></script>
 
 </body>
